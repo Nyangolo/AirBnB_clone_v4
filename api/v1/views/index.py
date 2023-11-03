@@ -1,15 +1,15 @@
 #!/usr/bin/python3
+'''Contains the index view for the API.'''
 from flask import jsonify
 from api.v1.views import app_views
 from models import storage
-from flask import Flask
 
-app = Flask(__name__)
 
 @app_views.route('/status', methods=['GET'], strict_slashes=False)
 def status():
     """ Returns JSON """
     return jsonify(status="OK")
+
 
 @app_views.route('/stats', methods=['GET'], strict_slashes=False)
 def stat():
