@@ -22,8 +22,3 @@ def stat():
         states=storage.count('State'),
         users=storage.count('User')
     )
-
-if __name__ == "__main__":
-    app.register_blueprint(app_views)
-    app.run(host='localhost', port=5000)
-
